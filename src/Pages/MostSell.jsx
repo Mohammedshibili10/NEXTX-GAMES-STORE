@@ -86,7 +86,6 @@ export default function MostSell() {
 
                             
                             <FaRegHeart
-                            onClick={red}
                                 className="text-white w-7 h-7 absolute right-2 top-8 w-8 cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 "
                                 alt="favorite"
                                 
