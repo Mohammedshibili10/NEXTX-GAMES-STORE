@@ -78,13 +78,15 @@ export default function MostSell() {
     return (
         <div>
             <div className=" px-10 py-10">
+                <p className='text-white text-[20px] capitalize font-extrabold py-10'>most selling games</p>
                 <div className="flex flex-wrap gap-20">
                     {sellMost.map((game) => (
                         
                         <div className="relative w-[300px] transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">
 
-                            <p cla>most selling games</p>
+                            
                             <FaRegHeart
+                            onClick={red}
                                 className="text-white w-7 h-7 absolute right-2 top-8 w-8 cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 "
                                 alt="favorite"
                                 

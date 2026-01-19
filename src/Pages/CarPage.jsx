@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaRegHeart } from "react-icons/fa6";
 
 
 import hotlap from '../assets/Images/carGame/hotlap.png'
@@ -48,7 +49,7 @@ export default function CarPage() {
 
 
             <FaRegHeart
-              className="absolute text-white w-7 h-7 right-4 top-4 w-5 cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 "
+              className="absolute text-white w-6 h-6 right-4 top-4 w-5 cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 "
               alt="favorite"
             />
             <img
