@@ -16,9 +16,8 @@ import apex from '../assets/Images/apex.png'
 import Footer from '../assets/Components/Footer'
 
 export default function SearchBar() {
-    const search = [{
-        name: "valorant", genre: "Riot Game", price: "₹2,000", img: valorant, offer: "₹1,200"
-    },
+    const search = [
+        {name: "valorant", genre: "Riot Game", price: "₹2,000", img: valorant, offer: "₹1,200"},
     { name: "RED DEAD II", genre: "Base Game", price: "₹4,800", offer: "₹3,500", img: RDRII },
     { name: "fallout", genre: "base game", price: "₹3,000", offer: "₹2,500", img: fallout },
     { name: "moving out", genre: "base game", price: "₹1,199", offer: "₹899", img: movingout },

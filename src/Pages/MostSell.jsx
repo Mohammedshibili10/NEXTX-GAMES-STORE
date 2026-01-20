@@ -77,23 +77,23 @@ export default function MostSell() {
       }
     return (
         <div>
-            <div className=" px-10 py-10">
+            <div className="md:px-10 lg:px-20 py-10 ">
                 <p className='text-white text-[20px] capitalize font-extrabold py-10'>most selling games</p>
-                <div className="flex flex-wrap gap-20">
+                <div className="md:grid grid-cols-4 md:gap-10 xl:gap-19 gap-y-10 pt-40">
                     {sellMost.map((game) => (
                         
-                        <div className="relative w-[300px] transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">
+                        <div className="relative md:w-full transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">
 
                             
                             <FaRegHeart
-                                className="text-white w-7 h-7 absolute right-2 top-8 w-8 cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 "
+                                className="text-white w-7 h-7   absolute  md:left-30 lg:left-35 xl:left-60 lg:top-4  top-4 w-8 cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 "
                                 alt="favorite"
                                 
                             />
 
 
                             <img
-                                className="rounded-xl w-full"
+                                className="rounded-xl w-65 md:w-full xl:w-75"
                                 src={game.img}
                                 alt={game.name}
                             />
@@ -103,11 +103,11 @@ export default function MostSell() {
                             </p>
 
                             <div className="flex justify-between items-center">
-                                <p className="text-white text-[13px] font-bold uppercase">
+                                <p className="text-white md:text-[10px]  lg:text-[13px] font-bold uppercase">
                                     {game.name}
                                 </p>
 
-                                <div className="flex gap-2">
+                                <div className="flex  lg:">
                                     <p className="text-gray-500 text-[10px] mt-1 line-through">
                                         {game.price}
                                     </p>

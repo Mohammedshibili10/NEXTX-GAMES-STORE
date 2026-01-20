@@ -32,13 +32,13 @@ export default function App() {
     {/* <ArrowL/>
     <ArrowR/> */}
     {/* <Library/> */}
-    <SearchBar/>
+    {/* <SearchBar/> */}
     {/* <Carpage/> */}
     {/* <Features/>
     <Genre/> */}
     {/* <Dots/> */}
-    {/* <Community/>
-    <MostSell/> */}
+    {/* <Community/> */}
+    <MostSell/>
 
     </div>
   )
