@@ -31,14 +31,14 @@ export default function App() {
     <SignButton/> */}
     {/* <ArrowL/>
     <ArrowR/> */}
-    <Library/>
+    {/* <Library/> */}
     <SearchBar/>
-    <Carpage/>
+    {/* <Carpage/> */}
     {/* <Features/>
     <Genre/> */}
     {/* <Dots/> */}
-    <Community/>
-    <MostSell/>
+    {/* <Community/>
+    <MostSell/> */}
 
     </div>
   )

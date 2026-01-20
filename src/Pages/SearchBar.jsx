@@ -33,10 +33,10 @@ export default function SearchBar() {
 
     ]
     return (
-        <div>
+        <div className=''>
             <div className='flex  flex-wrap px-10 space-y-20 py-10 bg-white'>
                 {search.map((games) => (
-                    <div className='transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 '>
+                    <div className='transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110'>
                         <img className='rounded-xl ml-15 w-75' src={games.img} alt="image error" />
                         <p className='ml-15 text-gray-500 text-[12px] font-bold capitalize mt-1'>{games.genre}</p>
 
