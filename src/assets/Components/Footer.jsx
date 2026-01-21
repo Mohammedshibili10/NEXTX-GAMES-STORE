@@ -45,7 +45,7 @@ export default function Footer() {
 
 
       </div>
-      <div className='md:flex  bg-[#0F0F0F] text-white md:gap-10 md:px-10 lg:px-30'>
+      <div className='md:flex  bg-[#0F0F0F] text-white md:gap-10 md:px-10 lg:px-30 xl:gap-0'>
         <p className='text-[12px] space-x-1 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 pt-10'>NextX-NextXGaming2024.Allrightsreserved.</p>
         <div className='flex  md:gap-10 md:ml-8 text-[12px] pt-14'>
           <p className='transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 '>Terms</p>
@@ -53,7 +53,7 @@ export default function Footer() {
           <p className='transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 '>Cookies</p>
 
         </div>
-        <div className='flex  mb-1 gap-x-2 xl:px-20 lg:px-15 lg:ml-5 mb-5 pt-13 '>
+        <div className='flex  mb-1 gap-x-2 xl:px-20 lg:px-15 lg:ml-5 mb-5 pt-13 xl:gap-5'>
           <GrLinkedin className='w-5 h-5 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 '  />
           <FaFacebookSquare className='w-5 h-5 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 '  />
           <FaXTwitter className='w-5  h-5 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 '  />
