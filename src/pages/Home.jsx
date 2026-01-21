@@ -4,6 +4,12 @@ import bg from "../assets/images/background.jpg"
 import Mostselling from "../componets/Mostselling";
 import Topgames from "../componets/Topgames";
 import Freegames from "../componets/Freegames";
+import Topcategory from "../componets/Topcategory";
+import Newrelease from "../componets/Newrelease";
+import Toprated from "../componets/Toprated";
+import Upcoming from "../componets/Upcoming";
+import Allgames from "../componets/Allgames";
+import Footer from "../componets/Footer";
 
 
 export default function Content() {
@@ -11,9 +17,9 @@ export default function Content() {
         < >
             <div className="bg-cover h-screen" style={{ backgroundImage: `url(${bg})` }} >
                 <Navbar />
-                <div >
+                <div className="" >
 
-                    <div className="ml-22 mt-50">
+                    <div className="px-22 mt-50">
                         <p className=" text-[20px] text-white">Most Selling Game In The Market</p>
                         <h1 className="text-[70px] font-bold text-white  tracking-10">Black Myth Wukong</h1>
                         <p className="text-[25px] text-white">Becoming The Game Of The Year 2024</p>
@@ -40,6 +46,22 @@ export default function Content() {
             <div>
                 <Freegames/>
             </div>
+            <div>
+                <Topcategory/>
+            </div>
+            <div>
+                <Newrelease/>
+            </div>
+            <div>
+                <Toprated/>
+            </div>
+            <div>
+                <Upcoming/>
+            </div>
+            <div>
+                <Allgames/>
+            </div>
+            <Footer/>
 
 
         </>
