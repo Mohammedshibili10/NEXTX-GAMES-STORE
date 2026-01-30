@@ -6,6 +6,7 @@ import valorant from "../assets/images/valorant.png";
 import hunter from "../assets/images/hunter.jpg";
 import naraka from "../assets/images/naraka.png";
 import clans from "../assets/images/clans.png";
+import { Link } from 'react-router-dom';
 
 export default function Mostselling() {
     const games = [{
@@ -50,6 +51,20 @@ export default function Mostselling() {
         name: 'CLANS',
         price: "500",
         offer: "1000",
+    },
+  {
+        images: clans,
+        type: 'Base Games',
+        name: 'CLANS',
+        price: "500",
+        offer: "1000",
+    },
+  {
+        images: clans,
+        type: 'Base Games',
+        name: 'CLANS',
+        price: "500",
+        offer: "1000",
     },]
     return (
 
@@ -61,17 +76,17 @@ export default function Mostselling() {
 
                     </div>
                     <div >
-                        <button className='w-31 h-8 rounded-[8px] bg-green-100 mt-2 font-bold' >View All</button>
+                      <Link to={'/mostselling'}>  <button className='w-31 h-8 rounded-[8px] bg-green-100 mt-2 font-bold' >View All</button></Link>
                     </div>
                 </div>
 
 
-                <div className='mt-12 flex justify-evenly gap-[40px]'>
+                <div className='mt-12 flex justify-evenly gap-[40px] h-130 overflow-x-auto no-scrollbar '>
                    {games.map((item)=>(
-                    <div className='w-66 h-108 relative'>
+                    <div className='w-100 h-80 relative  '>
                         <Wishlist />
-                        <div>
-                            <img className='w-66 h-94 rounded-[16px]' src={item.images} alt="error" />
+                        <div className=''>
+                            <img className='w-full h-94 rounded-[16px]' src={item.images} alt="error" />
 
                         </div>
                         <div>

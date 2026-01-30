@@ -3,11 +3,11 @@ import React from 'react'
 
 
 
-import Unit from '../assets/Components/Unit'
-import UnitHub from '../assets/Components/UnitHub'
-import Unitone from '../assets/Components/Unitone'
-import UnitTwo from '../assets/Components/UnitTwo'
-import Footer from '../assets/Components/Footer'
+import Unit from '../componets/Unit'
+import UnitHub from '../componets/UnitHub'
+import Unitone from '../componets/Unitone'
+import UnitTwo from '../componets/UnitTwo'
+import Footer from '../componets/Footer'
 
 
 export default function Community() {
