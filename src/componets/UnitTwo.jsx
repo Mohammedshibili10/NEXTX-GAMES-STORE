@@ -1,8 +1,8 @@
 import React from 'react'
-import baldur from '../Images/baldursgate.png'
-import gate from '../Images/gate.png'
-import phobia from '../Images/phobia.png'
-import kombat from '../Images/mortal.png'
+import baldur from '../assets/images/baldursgate.png'
+import gate from '../assets/images/gate.png'
+import phobia from '../assets/images/phobia.png'
+import kombat from '../assets/images/mortal.png'
 
 export default function UnitTwo() {
     const row = [{ name: "Baldurs Gate", script: "It's fun, exciting, and shows the potential to grow. Time will tell, but until then it's F2P.", image: baldur },

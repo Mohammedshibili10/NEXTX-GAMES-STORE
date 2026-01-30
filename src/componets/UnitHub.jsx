@@ -1,8 +1,8 @@
 import React from 'react'
-import warhammer from '../Images/warhammer.png'
-import hellblade1 from '../Images/hellblade1.png'
-import wallpaper from '../Images/wallpaper.png'
-import blackops from '../Images/blackops.png'
+import warhammer from '../assets/images/warhammer.png'
+import hellblade1 from '../assets/images/hellblade1.png'
+import wallpaper from '../assets/images/wallpaper.png'
+import blackops from '../assets/images/blackops.png'
 
 export default function UnitHub() {
     const hub = [{ name: "Total War: WARHAMMER", script: "As promised. Adds the career options from my Bruiser mod to the newly added CA Bruiser.", image: warhammer },

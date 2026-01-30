@@ -26,7 +26,8 @@ import winter from '../assets/Images/winter.png'
 import nomore from '../assets/Images/nomore.png'
 import wukong from '../assets/Images/wukong.png'
 import darkblade from '../assets/Images/darkblade.png'
-import Footer from '../assets/Components/Footer'
+import Footer from "../componets/Footer";
+
 
 export default function Library() {
   const game = [

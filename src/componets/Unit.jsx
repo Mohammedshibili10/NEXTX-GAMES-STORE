@@ -1,8 +1,8 @@
 import React from 'react'
-import hellblade from '../Images/hellblade.png'
-import starwars from '../Images/starwars.png'
-import farcry from '../Images/farcry.png'
-import exile from '../Images/exile.png'
+import hellblade from '../assets/images/hellblade.png'
+import starwars from '../assets/images/starwars.png'
+import farcry from '../assets/images/farcry.png'
+import exile from '../assets/images/exile.png'
 
 export default function Unit() {
     const unity = [{ name: "hellblade:Senu's sacrifice", image: hellblade, notif: "539 new screenshots this week" },
