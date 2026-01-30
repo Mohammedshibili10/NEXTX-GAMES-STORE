@@ -32,7 +32,7 @@ import Footer from '../componets/Footer'
 export default function MostSell() {
 
     const sellMost = [
-        { name: "black myth ", genre: "base game", price: "₹4,800", offer: "₹3,500", "" },
+        { name: "black myth ", genre: "base game", price: "₹4,800", offer: "₹3,500", img: valorant },
         { name: "borderlands ", genre: "base game", price: "₹1500", offer: "₹788", img: border },
         { name: "beyond light ", genre: "base game", price: "₹5000", offer: "₹4,555", img: light },
         { name: "among us", genre: "base game", price: "₹1,100", offer: "₹999", img: amongus },
