@@ -26,7 +26,7 @@ import border from '../assets/Images/border.png'
 import fifa from '../assets/Images/fifa.png'
 import amongus from '../assets/Images/amongus.png'
 import battleground from '../assets/Images/battleground.png'
-import Footer from '../assets/Components/Footer'
+import Footer from '../componets/Footer'
 
 
 export default function MostSell() {
@@ -78,8 +78,8 @@ export default function MostSell() {
     return (
         <div>
             <div className="md:px-10 lg:px-20 py-10 ">
-                <p className='text-white text-[20px] capitalize font-extrabold py-10'>most selling games</p>
-                <div className="md:grid grid-cols-4 md:gap-10 xl:gap-19 gap-y-10 pt-40">
+                <p className='text-white text-[20px] capitalize font-extrabold '>most selling games</p>
+                <div className="md:grid grid-cols-4 md:gap-10 xl:gap-19  pt-10">
                     {sellMost.map((game) => (
                         
                         <div className="relative md:w-full transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">

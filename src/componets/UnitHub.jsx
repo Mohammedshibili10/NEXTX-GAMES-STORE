@@ -1,8 +1,8 @@
 import React from 'react'
-import warhammer from '../Images/warhammer.png'
-import hellblade1 from '../Images/hellblade1.png'
-import wallpaper from '../Images/wallpaper.png'
-import blackops from '../Images/blackops.png'
+import warhammer from '../assets/Images/warhammer.png'
+import hellblade1 from '../assets/Images/hellblade1.png'
+import wallpaper from '../assets/Images/wallpaper.png'
+import blackops from '../assets/Images/blackops.png'
 
 export default function UnitHub() {
     const hub = [{ name: "Total War: WARHAMMER", script: "As promised. Adds the career options from my Bruiser mod to the newly added CA Bruiser.", image: warhammer },
@@ -14,13 +14,13 @@ export default function UnitHub() {
 
     return (
         <div>
-            <div className="grid grid-cols-2 space-y-4 max-w-md gap-x-40 ">
+            <div className="grid grid-cols-2 space-y-2  gap-x-14 md:space-y-5 ">
                 {hub.map((item) => (
-                    <div className='bg-[#0C0C0C] text-white flex w-70 h-32 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 '>
-                        <img className='w-30 h-32'  src={item.image} alt='image' />
+                    <div className='bg-[#0C0C0C] text-white flex w-70 h-32 md:w-90 md:h-34 lg:w-55 lg:h-32 justify-between  xl:w-66 xl:h-32 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 '>
+                        <img className='w-30 h-32 xl:h-full'  src={item.image} alt='image' />
                         <div className='transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 '>
                             <p className='text-[13px] font-extrabold ml-4'>{item.name}</p>
-                            <p className='text-[11px] font-semibold text-[#E8E8E8] ml-4 mt-3'>{item.script}</p>
+                            <p className='text-[11px] font-semibold text-[#E8E8E8] ml-4 mt-1'>{item.script}</p>
                         </div>
                     </div>
 
