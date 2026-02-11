@@ -7,6 +7,7 @@ import AlanWake from '../assets/images/AlanWake.png'
 import ageofwonder from '../assets/images/ageofwonder.png'
 import Spiderman from '../assets/images/Spiderman.png'
 import Wishlist from './Wishlist'
+import { Link } from 'react-router-dom'
 
 export default function Toprated() {
       const games = [{
@@ -68,45 +69,74 @@ export default function Toprated() {
     ]
   return (
       <div>
-               <div className='px-22 '>
-   
-                   <div className=' flex justify-between '>
-                       <div><h1 className=' text-white text-[26px] font-bold tracking-[1.5%] '>Most Selling Games </h1>
-   
-                       </div>
-                       <div >
-                           <button className='w-31 h-8 rounded-[8px] bg-green-100 mt-2 font-bold' >View All</button>
-                       </div>
-                   </div>
-   
-   
-                   <div className='mt-12 flex justify-evenly gap-[40px]'>
-                      {games.slice(0,6).map((item)=>(
-                       <div className='w-66 h-108 relative'>
-                           <Wishlist />
-                           <div>
-                               <img className='w-66 h-94 rounded-[16px]' src={item.images} alt="error" />
-   
-                           </div>
-                           <div>
-                            <div className='flex justify-between'>
-                               <h1 className='text-[14px] text-neutral-400'>{item.type}</h1>
-                               <div>{item.rating}</div>
-                               </div>
-                               <div className='flex  justify-between gap-2'>
-                                   <div>
-                                       <h1 className='text-[16px] font-bold text-white'>{item.name}</h1>
-                                   </div>
-                                   <div className='flex gap-1'>
-                                    
-                                       <p style={{ color: 'green' }} className='text-[16px] font-bold  '>${item.price}</p>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                       ))}
-                 </div>
-            </div> 
+            <div className='px-4 sm:px-8 md:px-14 lg:px-20 py-10'>
+
+                {/* Header */}
+                <div className='flex justify-between items-center'>
+                    <h1 className='text-white text-xl sm:text-2xl md:text-[26px] font-bold tracking-wide'>
+                        Top Rated Games
+                    </h1>
+
+                    <Link to={'/mostselling'}>
+                        <button className='w-24 sm:w-28 h-8 rounded-[8px] bg-green-100 font-bold text-sm'>
+                            View All
+                        </button>
+                    </Link>
+                </div>
+
+
+                {/* Scroll Section */}
+                <div className='mt-10 flex gap-10 overflow-x-auto no-scrollbar scroll-smooth'>
+
+                    {games.map((item, index) => (
+
+                        <div
+                            key={index}
+                            className='min-w-[220px] sm:min-w-[250px] md:min-w-[260px]  relative'
+                        >
+                            <Wishlist />
+
+                            {/* Image */}
+                            <img
+                                className='w-full  h-[260px] sm:h-[300px] md:h-[320px] lg:h-[360px] rounded-[16px]'
+                                src={item.images}
+                                alt="game"
+                            />
+
+                            {/* Content */}
+                            <div className='mt-2'>
+                                <h1 className='text-[13px] text-neutral-400'>
+                                    {item.type}
+                                </h1>
+
+                                <div className='flex justify-between items-center gap-2'>
+                                    <h1 className='text-[15px] sm:text-[16px] font-bold text-white'>
+                                        {item.name}
+                                    </h1>
+
+                                    <div className='flex gap-1 items-center'>
+                                        <p className='text-[11px] text-gray-300 line-through'>
+                                            ${item.offer}
+                                        </p>
+
+                                        <p className='text-[15px] font-bold text-green-400'>
+                                            ${item.price}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    ))}
+                        <div  className='min-w-[220px] sm:min-w-[250px] md:min-w-[280px] border border-gray-500 relative snap-start rounded-lg flex justify-center items-center'>
+                       <Link to={'/toprated'}>
+                        <button className='w-35 h-8  rounded-[12px] bg-gray-500 font-bold  text-lg'>View All</button>
+                      </Link>
+                    </div>
+                </div>
+
             </div>
+        </div>
   )
 }

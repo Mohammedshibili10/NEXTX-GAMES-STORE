@@ -5,7 +5,9 @@ import racing from '../assets/images/racing.png'
 import sports from '../assets/images/sports.png'
 import survival from '../assets/images/survival.png'
 import store from '../assets/images/store.png'
+
 export default function Topcategory() {
+
 const category=[{
     name:"RACING",
     image:racing
@@ -31,22 +33,32 @@ const category=[{
     image:sports
 },]
 
-
-
   return (
-    <div className='px-22 text-white'>
+    <div className='px-5 sm:px-8 md:px-14 lg:px-20 xl:px-22 text-white py-10'>
        
-        
-        <div className=''>
-           <h1 className='text-[26px] font-bold tracking-[1.5%] '>Top Category</h1>
+        <div>
+           <h1 className='text-[22px] sm:text-[24px] md:text-[26px] font-bold tracking-[1.5%]'>
+             Top Category
+           </h1>
         </div>
-        <div className='grid grid-rows-2 grid-cols-3 gap-y-10 gap-6  pt-12'>
-         {category.map((cate)=>(
-        <div className='relative '>
-            <img className='w-137 h-85 rounded-4xl' src={cate.image} alt="error" />
-            <h1 className='absolute bottom-6 left-55 text-center text-3xl font-bold'>{cate.name}</h1>
+
+        {/* Responsive Grid */}
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-12'>
+         {category.map((cate, index)=>(
+        <div key={index} className='relative'>
+            
+            <img 
+              className='w-full h-60 sm:h-72 md:h-80 object-cover rounded-4xl' 
+              src={cate.image} 
+              alt="error" 
+            />
+
+            {/* Centered Text */}
+            <h1 className='absolute bottom-6 left-1/2 -translate-x-1/2 text-xl sm:text-2xl font-bold text-center'>
+              {cate.name}
+            </h1>
+
         </div>
-        
           ))}
         </div>
       

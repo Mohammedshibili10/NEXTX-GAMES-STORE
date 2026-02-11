@@ -25,17 +25,17 @@ export default function Upcoming() {
     
 
   return (
-    <div className='px-22 py-20 '>
+    <div className='md:px-22 py-20 '>
              <div className='bg-[#0B0B0C] rounded-3xl'>
                 <div className=' flex justify-between px-10 py-5  '>
-                    <div><h1 className=' text-white text-[26px] font-bold tracking-[1.5%] '>Most Selling Games </h1>
+                    <div><h1 className=' text-white text-[26px] font-bold tracking-[1.5%] '>Up Coming Games </h1>
 
                     </div>
                     <div >
                         <button className='w-31 h-8 rounded-[8px] bg-green-100 mt-2 font-bold' >View All</button>
                     </div>
                 </div>
-                <div className='flex  gap-10 px-15'>
+                <div className='grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] md:gap-10 px-5 md:px-15'>
                 {events.map((eve)=>(
                 <div className='mt-7 '>
                     <img className='w-128 h-80 rounded-4xl' src={eve.image} alt="error" />

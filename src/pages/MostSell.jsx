@@ -77,23 +77,23 @@ export default function MostSell() {
       }
     return (
         <div>
-            <div className="md:px-10 lg:px-20 py-10 ">
-                <p className='text-white text-[20px] capitalize font-extrabold py-10'>most selling games</p>
-                <div className="md:grid grid-cols-4 md:gap-10 xl:gap-19 gap-y-10 pt-40">
+            <div className="px-5 md:px-10  lg:px-20 py-10 ">
+                <p className='text-white text-[20px] capitalize font-extrabold py-10 '>most selling games</p>
+                <div className="md:grid grid-cols-4  md:gap-10 xl:gap-10 gap-y-20 ">
                     {sellMost.map((game) => (
                         
-                        <div className="relative md:w-full transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">
+                        <div className="relative w-full transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">
 
                             
                             <FaRegHeart
-                                className="text-white w-7 h-7   absolute  md:left-30 lg:left-35 xl:left-60 lg:top-4  top-4 w-8 cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 "
+                                className="text-white w-7 h-7   absolute left-83 md:left-25 lg:left-35 xl:left-80 lg:top-4  top-4 w-8 cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 "
                                 alt="favorite"
                                 
                             />
 
 
                             <img
-                                className="rounded-xl w-65 md:w-full xl:w-75"
+                                className="rounded-xl  w-full "
                                 src={game.img}
                                 alt={game.name}
                             />
@@ -107,7 +107,7 @@ export default function MostSell() {
                                     {game.name}
                                 </p>
 
-                                <div className="flex  lg:">
+                                <div className="flex  lg:gap-2">
                                     <p className="text-gray-500 text-[10px] mt-1 line-through">
                                         {game.price}
                                     </p>
