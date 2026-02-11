@@ -9,102 +9,125 @@ import clans from "../assets/images/clans.png";
 import { Link } from 'react-router-dom';
 
 export default function Mostselling() {
-    const games = [{
-        images: blackmyth,
-        type: 'Base Games',
-        name: 'BLACK MYTH WUKONG',
-        price: "3500",
-        offer: "4800",
-    },
-    {
-        images: zaklinac,
-        type: 'EA Games',
-        name: 'ZAKLINAC DIVOKY',
-        price: "3500",
-        offer: "5000",
-    },
-    {
-        images: valorant,
-        type: 'Riot Game',
-        name: 'VALORANT',
-        price: "1500",
 
-    },
-    {
-        images: hunter,
-        type: 'Base Games',
-        name: 'DESTINY HUNTER',
-        price: "2500",
-        offer: "1800",
-    },
-    {
-        images: naraka,
-        type: 'Base Games',
-        name: 'NARAKA',
-        price: "3500",
-        offer: "4800",
-    },
+    const games = [
+        {
+            images: blackmyth,
+            type: 'Base Games',
+            name: 'BLACK MYTH WUKONG',
+            price: "3500",
+            offer: "4800",
+        },
+        {
+            images: zaklinac,
+            type: 'EA Games',
+            name: 'ZAKLINAC DIVOKY',
+            price: "3500",
+            offer: "5000",
+        },
+        {
+            images: valorant,
+            type: 'Riot Game',
+            name: 'VALORANT',
+            price: "1500",
+        },
+        {
+            images: hunter,
+            type: 'Base Games',
+            name: 'DESTINY HUNTER',
+            price: "2500",
+            offer: "1800",
+        },
+        {
+            images: naraka,
+            type: 'Base Games',
+            name: 'NARAKA',
+            price: "3500",
+            offer: "4800",
+        },
+        {
+            images: clans,
+            type: 'Base Games',
+            name: 'CLANS',
+            price: "500",
+            offer: "1000",
+        },
+       
+      
+    ]
 
-    {
-        images: clans,
-        type: 'Base Games',
-        name: 'CLANS',
-        price: "500",
-        offer: "1000",
-    },
-  {
-        images: clans,
-        type: 'Base Games',
-        name: 'CLANS',
-        price: "500",
-        offer: "1000",
-    },
-  {
-        images: clans,
-        type: 'Base Games',
-        name: 'CLANS',
-        price: "500",
-        offer: "1000",
-    },]
     return (
 
         <div>
-            <div className='px-22 py-15'>
+            <div className='px-4 sm:px-8 md:px-14 lg:px-20 py-10'>
 
-                <div className=' flex justify-between '>
-                    <div><h1 className=' text-white text-[26px] font-bold tracking-[1.5%] '>Most Selling Games </h1>
+                {/* Header */}
+                <div className='flex justify-between items-center'>
+                    <h1 className='text-white text-xl sm:text-2xl md:text-[26px] font-bold tracking-wide'>
+                        Most Selling Games
+                    </h1>
 
-                    </div>
-                    <div >
-                      <Link to={'/mostselling'}>  <button className='w-31 h-8 rounded-[8px] bg-green-100 mt-2 font-bold' >View All</button></Link>
-                    </div>
+                    <Link to={'/mostselling'}>
+                        <button className='w-24 sm:w-28 h-8 rounded-[8px] bg-green-100 font-bold text-sm'>
+                            View All
+                        </button>
+                    </Link>
                 </div>
 
 
-                <div className='mt-12 flex justify-evenly gap-[40px] h-130 overflow-x-auto no-scrollbar '>
-                   {games.map((item)=>(
-                    <div className='w-100 h-80 relative  '>
-                        <Wishlist />
-                        <div className=''>
-                            <img className='w-full h-94 rounded-[16px]' src={item.images} alt="error" />
+                {/* Scroll Section */}
+                <div className='mt-10 flex gap-10 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory'>
 
-                        </div>
-                        <div>
-                            <h1 className='text-[14px] text-neutral-400'>{item.type}</h1>
-                            <div className='flex  justify-between gap-2'>
-                                <div>
-                                    <h1 className='text-[16px] font-bold text-white'>{item.name}</h1>
-                                </div>
-                                <div className='flex gap-1'>
-                                    <p style={{ color: '#E8E8E8' }} className='text-[11px] mt-1.5 '>${item.price}</p>
-                                    <p style={{ color: 'green' }} className='text-[16px] font-bold  '>${item.offer}</p>
+                    {games.map((item, index) => (
+
+                        <div
+                            key={index}
+                            className='min-w-[220px] sm:min-w-[250px] md:min-w-[260px]  relative snap-start'
+                        >
+                            <Wishlist />
+
+                            {/* Image */}
+                            <img
+                                className='w-full  h-[260px] sm:h-[300px] md:h-[320px] lg:h-[360px] rounded-[16px]'
+                                src={item.images}
+                                alt="game"
+                            />
+
+                            {/* Content */}
+                            <div className='mt-2'>
+                                <h1 className='text-[13px] text-neutral-400'>
+                                    {item.type}
+                                </h1>
+
+                                <div className='flex justify-between items-center gap-2'>
+                                    <h1 className='text-[15px] sm:text-[16px] font-bold text-white'>
+                                        {item.name}
+                                    </h1>
+
+                                    <div className='flex gap-1 items-center'>
+                                        <p className='text-[11px] text-gray-300 line-through'>
+                                            ${item.offer}
+                                        </p>
+
+                                        <p className='text-[15px] font-bold text-green-400'>
+                                            ${item.price}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
-                    </div>
+
                     ))}
-              </div>
-         </div> 
-         </div>
-  )
+                    <div  className='min-w-[220px] sm:min-w-[250px] md:min-w-[260px]  h-[260px] sm:h-[300px] md:h-[320px] lg:h-[390px]  border border-gray-500 relative snap-start rounded-lg flex justify-center items-center'>
+                      <Link to={'/mostselling'}>
+                        <button className='w-35 h-8  rounded-[12px] bg-gray-500 font-bold  text-lg'>View All</button>
+                      </Link>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    )
 }

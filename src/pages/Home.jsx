@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../componets/Navbar";
 import bg from "../assets/images/background.jpg"
 import Mostselling from "../componets/Mostselling";
@@ -10,31 +10,86 @@ import Toprated from "../componets/Toprated";
 import Upcoming from "../componets/Upcoming";
 import Allgames from "../componets/Allgames";
 import Footer from "../componets/Footer";
+import maxresbg from '../assets/images/maxresbg.png' 
+import seaBg from'../assets/images/seaBg.png' 
+import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import { IoArrowBackCircleOutline } from "react-icons/io5";
 
 
 export default function Content() {
-    return (
-        < div className="max-w-full mx-auto" >
-            <div
-  className="bg-cover bg-center min-h-screen"
-  style={{ backgroundImage: `url(${bg})` }}
->
-  <Navbar />
+  const slides = [
+    {
+      title: "Black Myth Wukong",
+      subtitle: "Becoming The Game Of The Year 2024",
+      desc: "Most Selling Game In The Market",
+      image: bg
+    },
+    {
+      title: "THE FINAL",
+      subtitle: "Free to play game / Online Multiplayer",
+      desc: " New Season is out",
+      image: maxresbg
+    },
+    {
+      title: "SEA OF THIEVES",
+      subtitle: "Becoming The Game Of The Year 2024 ",
+      desc: "Most Selling Game In The Market",
+      image: seaBg
+    }
+  ];
 
-  <div className="flex flex-col justify-between min-h-[calc(100vh-80px)]">
+
+
+const [current ,setCurrent]=useState(0);
+
+//AUTO SLIDE
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    nextSlide();
+  }, 4000); // 4 sec
+
+  return () => clearInterval(interval);
+}, []);
+
+// NEXT
+const nextSlide = () => {
+  setCurrent(prev => (prev + 1) % slides.length);
+};
+
+// PREVIOUS
+const prevSlide = () => {
+  setCurrent(prev => 
+    prev === 0 ? slides.length - 1 : prev - 1
+  );
+};
+
+
+  return (
+    < div className="max-w-full mx-auto overflow-hidden relative " >
+       <div className="absolute top-0 left-0 w-full z-50">
+      <Navbar />
+    </div>
+      <div className="flex transition-transform duration-500 ease-in-out relative "  style={{ transform: `translateX(-${current * 100}%)` }}>
+      {slides.map((slide, index) => (
+  <div key={index} className="bg-cover bg-center min-h-screen min-w-full flex-shrink-0" style={{ backgroundImage: `url(${slide.image})` }}>
+
+
+  <div className="flex flex-col justify-between min-h-[calc(100vh-80px)] pt-35">
 
     {/* HERO CONTENT */}
-    <div className="px-5 sm:px-8 md:px-16 lg:px-22 mt-24 sm:mt-32 md:mt-40">
+    
+    <div className="px-5 sm:px-8 md:px-16 lg:px-27 mt-24 sm:mt-32 md:mt-40">
       <p className="text-sm sm:text-base md:text-lg text-white">
-        Most Selling Game In The Market
+        {slide.desc}
       </p>
 
       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[70px] font-bold text-white tracking-wide">
-        Black Myth Wukong
+        {slide.title}
       </h1>
 
       <p className="text-base sm:text-lg md:text-xl lg:text-[25px] text-white mt-2">
-        Becoming The Game Of The Year 2024
+        {slide.subtitle}
       </p>
 
       <button className="w-40 sm:w-[179px] h-10 border rounded-md text-sm sm:text-base text-white mt-8 hover:bg-gray-400 transition">
@@ -42,30 +97,42 @@ export default function Content() {
       </button>
     </div>
 
-    {/* ARROWS */}
-    <div className="flex justify-between items-center px-3 md:px-6 mb-10">
-      <img
-        className="w-6 sm:w-8 md:w-10"
-        src="src/assets/images/left.png"
-        alt="left"
-      />
-      <img
-        className="w-6 sm:w-8 md:w-10"
-        src="src/assets/images/right.png"
-        alt="right"
-      />
-    </div>
+  
 
-    {/* DOTS */}
-    <div className="flex gap-2 justify-center pb-6">
-      <div className="w-2 h-2 bg-white rounded-full"></div>
-      <div className="w-2 h-2 bg-white rounded-full opacity-60"></div>
-      <div className="w-2 h-2 bg-white rounded-full opacity-60"></div>
-    </div>
-
+ 
+   
   </div>
+
+</div>
+  ))}
+</div>
+ {/* ✅ ARROWS */}
+<div className=" hidden md:flex relative bottom-130  left-0 right-0 justify-between items-center px-6 -translate-y-1/2  ">
+
+  <IoArrowBackCircleOutline
+    onClick={prevSlide}
+    className="w-12 h-12 text-white cursor-pointer hover:scale-110 transition pointer-events-auto"
+  />
+
+  <IoArrowForwardCircleOutline
+    onClick={nextSlide}
+    className="w-12 h-12 text-white cursor-pointer hover:scale-110 transition pointer-events-auto"
+  />
+
 </div>
 
+<div className="relative bottom-30 flex gap-3 justify-center pb-6 absolute bottom-6 left-1/2 -translate-x-1/2">
+  {slides.map((_, index) => (
+    <div
+      key={index}
+      onClick={() => setCurrent(index)}
+      className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300
+      ${current === index 
+        ? "bg-white scale-120" 
+        : "bg-white/40 scale-100"}`}
+    />
+  ))}
+</div>
             <div>
                 <Mostselling/>
             </div>
@@ -94,5 +161,5 @@ export default function Content() {
 
 
         </div>
-    )
+  )
 }
