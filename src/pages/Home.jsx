@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../componets/Navbar";
-import bg from "../assets/images/background.jpg"
+import background from "../assets/images/background.jpg"
 import Mostselling from "../componets/Mostselling";
 import Topgames from "../componets/Topgames";
 import Freegames from "../componets/Freegames";
@@ -22,7 +22,7 @@ export default function Content() {
       title: "Black Myth Wukong",
       subtitle: "Becoming The Game Of The Year 2024",
       desc: "Most Selling Game In The Market",
-      image: bg
+      image: background
     },
     {
       title: "THE FINAL",
