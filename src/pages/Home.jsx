@@ -10,7 +10,7 @@ import Toprated from "../componets/Toprated";
 import Upcoming from "../componets/Upcoming";
 import Allgames from "../componets/Allgames";
 import Footer from "../componets/Footer";
-import maxresbg from '../assets/images/maxresbg.png' 
+import maxresBg from '../assets/images/maxresbg.png' 
 import seaBg from'../assets/images/seaBg.png' 
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
@@ -28,7 +28,7 @@ export default function Content() {
       title: "THE FINAL",
       subtitle: "Free to play game / Online Multiplayer",
       desc: " New Season is out",
-      image: maxresbg
+      image: maxresBg
     },
     {
       title: "SEA OF THIEVES",
