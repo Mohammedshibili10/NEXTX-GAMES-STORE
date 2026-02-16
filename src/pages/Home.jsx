@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../componets/Navbar";
-import background from "../assets/images/background.jpg"
+
 import Mostselling from "../componets/Mostselling";
 import Topgames from "../componets/Topgames";
 import Freegames from "../componets/Freegames";
@@ -10,8 +10,7 @@ import Toprated from "../componets/Toprated";
 import Upcoming from "../componets/Upcoming";
 import Allgames from "../componets/Allgames";
 import Footer from "../componets/Footer";
-import maxresBg from '../assets/images/maxresbg.png' 
-import seaBg from'../assets/images/seaBg.png' 
+
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
 
@@ -22,19 +21,19 @@ export default function Content() {
       title: "Black Myth Wukong",
       subtitle: "Becoming The Game Of The Year 2024",
       desc: "Most Selling Game In The Market",
-      image: background
+      image: "/background.jpg"
     },
     {
       title: "THE FINAL",
       subtitle: "Free to play game / Online Multiplayer",
       desc: " New Season is out",
-      image: maxresBg
+      image:"/maxresbg.png"
     },
     {
       title: "SEA OF THIEVES",
       subtitle: "Becoming The Game Of The Year 2024 ",
       desc: "Most Selling Game In The Market",
-      image: seaBg
+      image: "/seaBg.png"
     }
   ];
 
