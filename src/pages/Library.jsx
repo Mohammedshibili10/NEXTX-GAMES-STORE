@@ -4,7 +4,7 @@ import { FaRegHeart } from "react-icons/fa6";
 
 import valorant from '../assets/images/valorant.png'
 import crysis from '../assets/images/Crysis.png'
-import witch from '../assets/images/witch.png'
+// import witch from '../assets/images/witch.png'
 import ctankep from '../assets/images/ctankep.png'
 import instal from '../assets/images/instal.png'
 import punk from '../assets/images/punk.png'
