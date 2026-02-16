@@ -4,7 +4,7 @@ import { FaRegHeart } from "react-icons/fa6";
 
 
 import valorant from '../assets/images/valorant.png'
-import destiny from '../assets/images/destiny.png'
+// import destiny from '../assets/images/destiny.png'
 import fallout from '../assets/images/fallout.png'
 import skylines from '../assets/images/skylines.png'
 import solarshifter from '../assets/images/solarshifter.png'
