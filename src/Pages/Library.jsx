@@ -65,7 +65,7 @@ export default function Library() {
 
 
   return (
-    <div className=' pt-5 py-5  '>
+    <div className='pt-5 py-5'>
 
 
       <div className='lg:ml-3'>
