@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       
-        {/* <Home/> */}
+        <Home/>
         {/* <Banner />
         <Content />
         <Mostselling/>
