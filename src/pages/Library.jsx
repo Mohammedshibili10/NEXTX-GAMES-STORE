@@ -26,8 +26,13 @@ import winter from '../assets/images/winter.png'
 import nomore from '../assets/images/nomore.png'
 import wukong from '../assets/images/wukong.png'
 import darkblade from '../assets/images/darkblade.png'
+<<<<<<< HEAD:src/Pages/Library.jsx
+
+import Footer from '../componets/Footer'
+=======
 import Footer from "../componets/Footer";
 
+>>>>>>> origin/master:src/pages/Library.jsx
 
 export default function Library() {
   const game = [
@@ -65,30 +70,30 @@ export default function Library() {
 
 
   return (
-    <div className='bg-black bg-cover ptx-10 py-20'>
+    <div className='pt-5 py-5'>
 
 
-      <div className=' ml-20 pt-10'>
+      <div className='lg:ml-3'>
         <div >
           <h1 className='text-2xl font-bold ml-10 text-white'>Library</h1>
         </div>
-        <div className='flex ml-20'>
+        <div className='flex ml-20 lg:ml-18'>
           <h1 className='capitalize font-bold text-white'>filter </h1>
           <select className='text-white'>
             <option></option>
           </select>
         </div>
       </div>
-      <div className='flex ml-15 flex-wrap'>
+      <div className='md:grid grid-cols-4 gap-10 md:px-10 lg:px-10 '>
         {game.map((games) => (
-          <div className='pt-20 relative transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 '>
-            <FaRegHeart onClick={red} className='text-white w-8 h-8  ml-75 absolute mt-4 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110' />
-            <img className='rounded-xl ml-15 w-70' src={games.image} alt="image error" />
-            <h1 className='flex'>
-              <p className='ml-15 text-white font-bold capitalize mt-1'>{games.name}</p>
-              <p className='ml-45 text-gray-500'>{games.content}</p>
+          <div className='pt-20 relative'>
+            <FaRegHeart onClick={red} className='text-white w-8 h-8   right-30 md:right-2 lg:right-3 xl:right-3 absolute mt-4 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110' />
+            <img className='rounded-xl  w-full  ' src={games.image} alt="image error" />
+            <h1 className='flex justify-between   '>
+              <p className=' text-white font-bold md:text-[15px] capitalize mt-1'>{games.name}</p>
+              <p className=' text-gray-500'>{games.content}</p>
             </h1>
-            <img className='ml-15 mt-2' src={games.downl} alt='dowload' />
+            <img className=' mt-2 hover:text-blue-500 relative transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110' src={games.downl} alt='dowload' />
           </div>
         ))}
 

@@ -2,7 +2,11 @@ import React, { useState } from 'react'
 import { FaRegHeart } from "react-icons/fa6";
 
 
+<<<<<<< HEAD:src/Pages/MostSell.jsx
+import wukong from '../assets/images/wukong.png'
+=======
 
+>>>>>>> origin/master:src/pages/MostSell.jsx
 import valorant from '../assets/images/valorant.png'
 import destiny from '../assets/images/destiny.png'
 import fallout from '../assets/images/fallout.png'
@@ -77,9 +81,15 @@ export default function MostSell() {
       }
     return (
         <div>
+<<<<<<< HEAD:src/Pages/MostSell.jsx
+            <div className="md:px-10 lg:px-20 py-10 ">
+                <p className='text-white text-[20px] capitalize font-extrabold '>most selling games</p>
+                <div className="md:grid grid-cols-4 md:gap-10 xl:gap-19  pt-10">
+=======
             <div className="px-5 md:px-10  lg:px-20 py-10 ">
                 <p className='text-white text-[20px] capitalize font-extrabold py-10 '>most selling games</p>
                 <div className="md:grid grid-cols-4  md:gap-10 xl:gap-10 gap-y-20 ">
+>>>>>>> origin/master:src/pages/MostSell.jsx
                     {sellMost.map((game) => (
                         
                         <div className="relative w-full transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">

@@ -1,5 +1,21 @@
 import { useState } from 'react'
 import './App.css'
+<<<<<<< HEAD
+import Navbar from './componets/Navbar'
+import Home from './pages/Home'
+import Banner from './componets/banner'
+import Mostselling from './componets/Mostselling'
+import Topgames from './componets/Topgames'
+import Freegames from './componets/Freegames'
+import MostSell from './Pages/MostSell'
+import Advgames from './Pages/Advgames'
+import Library from './Pages/Library'
+import SearchBar from './Pages/SearchBar'
+import Community from './Pages/Community'
+import CarPage from './Pages/Carpage'
+import Wishlist from './componets/Wishlist'
+=======
+>>>>>>> origin/master
 
 import Home from './pages/Home'
 
@@ -13,6 +29,22 @@ function App() {
 
   return (
     <>
+<<<<<<< HEAD
+      
+        <Home/>
+        {/* <Banner />
+        <Content />
+        <Mostselling/>
+        <Topgames/>
+        <Freegames/> */}
+        {/* <MostSell/> */}
+        <Advgames/>
+       <Library/>
+       <SearchBar/>
+       <Community/>
+       <CarPage/>
+       
+=======
       <Routes>
     <Route path='/' element={<Home/>}/>
     <Route path='/library' element={<Library/>}/>
@@ -20,6 +52,7 @@ function App() {
     <Route path='/mostselling' element={<MostSell/>}/>
        
         </Routes>
+>>>>>>> origin/master
     </>
   )
 }

@@ -42,43 +42,49 @@ export default function CarPage() {
   ]
 
   return (
-    <div className=" px-20 py-10 w-full">
-      <div className="flex flex-wrap gap-15">
-        {catRace.map((game) => (
-          <div className="relative w-[300px] ">
-
-
-            <FaRegHeart
-              className="absolute text-white w-6 h-6 right-4 top-4 w-5 cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 "
-              alt="favorite"
-            />
-            <img
-              className="rounded-xl w-full"
-              src={game.img}
-              alt={game.name}
-            />
-            <p className="text-gray-500 text-[12px] font-bold capitalize mt-1 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">
-              {game.genre}
-            </p>
-            <div className="flex justify-between items-center">
-              <p className="text-white text-[13px] font-bold uppercase transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">
-                {game.name}
-              </p>
-
-              <div className="flex gap-2">
-                <p className="text-gray-500 text-[10px] mt-1 line-through transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">
-                  {game.price}
-                </p>
-                <p className="text-green-500 font-extrabold text-[13px] transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">
-                  {game.offer}
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <p className='py-10'><Footer/></p> 
-      
-    </div>
+     <div className="md:px-10 lg:px-20 py-10 ">
+                    <p className='text-white text-[20px] capitalize font-extrabold '>most selling games</p>
+                    <div className="md:grid grid-cols-4  md:gap-10 xl:gap-19   pt-10">
+                        {catRace.map((game) => (
+                            
+                            <div className="relative md:w-full transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ">
+    
+                                
+                                <FaRegHeart
+                                    className="text-white w-7 h-7 absolute left-50  md:left-27 lg:left-35 xl:left-66 lg:top-4  top-4 w-8 cursor-pointer transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 "
+                                    alt="favorite"
+                                    
+                                />
+    
+    
+                                <img
+                                    className="rounded-xl w-70  sm:w-full md:w-full xl:w-80 "
+                                    src={game.img}
+                                    alt={game.name}
+                                />
+    
+                                <p className="text-gray-500 text-[12px] font-bold capitalize mt-1">
+                                    {game.genre}
+                                </p>
+    
+                                <div className="flex justify-between items-center">
+                                    <p className="text-white md:text-[10px]  lg:text-[13px] font-bold uppercase">
+                                        {game.name}
+                                    </p>
+    
+                                    <div className="flex ">
+                                        <p className="text-gray-500 text-[10px] mt-1 line-through">
+                                            {game.price}
+                                        </p>
+                                        <p className="text-green-500 font-extrabold text-[13px]">
+                                            {game.offer}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+  
   )
 }
