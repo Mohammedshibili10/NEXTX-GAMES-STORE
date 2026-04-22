@@ -1,8 +1,15 @@
 import React from 'react'
+<<<<<<< HEAD
 import amorphous from '../assets/Images/amorphous.png'
 import rdr1 from '../assets/Images/RDR1.png'
 import l4d1 from '../assets/Images/L4D1.png'
 import hellblade2 from '../assets/Images/hellblade2.png'
+=======
+import amorphous from '../assets/images/amorphous.png'
+import rdr1 from '../assets/images/RDR1.png'
+import l4d1 from '../assets/images/L4D1.png'
+import hellblade2 from '../assets/images/hellblade2.png'
+>>>>>>> origin/master
 
 export default function Unitone() {
     const CommunityData = [{ name: "Amorphous style pack", script: "This mod has added a series of amorphous style weapons and some furniture styles.", image: amorphous },

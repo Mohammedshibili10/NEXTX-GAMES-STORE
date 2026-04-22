@@ -26,8 +26,13 @@ import winter from '../assets/images/winter.png'
 import nomore from '../assets/images/nomore.png'
 import wukong from '../assets/images/wukong.png'
 import darkblade from '../assets/images/darkblade.png'
+<<<<<<< HEAD:src/Pages/Library.jsx
 
 import Footer from '../componets/Footer'
+=======
+import Footer from "../componets/Footer";
+
+>>>>>>> origin/master:src/pages/Library.jsx
 
 export default function Library() {
   const game = [
