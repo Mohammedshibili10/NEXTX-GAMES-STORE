@@ -8,7 +8,7 @@ import ageofwonder from '../assets/images/ageofwonder.png'
 import Spiderman from '../assets/images/Spiderman.png'
 import blackmyth from "../assets/images/blackmyth.jpg";
 import zaklinac from "../assets/images/zaklinac.jpg";
-import valorant from "../assets/images/valorant.png";
+import valorant from "../assets/images/valorantbg.png";
 import hunter from "../assets/images/hunter.jpg";
 import naraka from "../assets/images/naraka.png";
 import clans from "../assets/images/clans.png";

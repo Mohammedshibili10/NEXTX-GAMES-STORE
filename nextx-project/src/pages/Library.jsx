@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FaRegHeart } from "react-icons/fa6";
 
 
-import valorant from '../assets/images/valorant.png'
+import valorant from '../assets/images/valorantbg.png'
 import crysis from '../assets/images/Crysis.png'
 import witch from '../assets/images/witch.png'
 import ctankep from '../assets/images/ctankep.png'

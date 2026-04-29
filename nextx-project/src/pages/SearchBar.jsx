@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import valorant from '../assets/images/valorant.png'
+import valorant from '../assets/images/valorantbg.png'
 import RDRII from '../assets/images/RDRII.png'
 import fallout from '../assets/images/fallout.png'
 import movingout from '../assets/images/movingout.png'
