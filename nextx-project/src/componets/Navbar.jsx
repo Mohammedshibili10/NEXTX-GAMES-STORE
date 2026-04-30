@@ -76,9 +76,9 @@ export default function Navbar() {
             <img className="w-6" src={cart} alt="cart" />
           </div>
 
-          <div className="w-[45px] h-[45px] rounded-full bg-white hover:bg-gray-300 flex items-center justify-center">
+          <Link to='/register'> <div className="w-[45px] h-[45px] rounded-full bg-white hover:bg-gray-300 flex items-center justify-center">
             <img className="w-7" src={user} alt="user" />
-          </div>
+          </div></Link>
         </div>
       </div>
 
